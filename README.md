@@ -31,3 +31,12 @@ make install
 depmod -a
 modprobe xpad
 ```
+
+### REMEBER!
+
+Remember that using modprobe activate module only on this session, to make this module
+available at boot you should execute the following command
+
+```bash
+echo "xpad" > /etc/modules-load.d/xpad.conf
+```
