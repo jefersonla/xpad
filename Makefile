@@ -1,4 +1,4 @@
-KERNEL_PATH?=/usr/src/linux-headers-$(shell uname -r)
+KERNEL_PATH?=/usr/src/kernel
 
 EXTRA_CFLAGS=-I$(shell pwd)
 
@@ -8,4 +8,4 @@ all:
 	$(MAKE) modules -C $(KERNEL_PATH) SUBDIRS=$(shell pwd)
 
 install:
-	cp -f xpad.ko /lib/modules/$(shell uname -r)/kernel/drivers/input/joystick
+	cp -f xpad.ko /lib/modules/$(shell uname -r)/kernel/drivers/input
